@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Test TBTB GLobal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Api Test TBTB Global por Héctor Madariaga</h1>
+
+    <h2>Peticiones para Usuarios</h2>
+    
+    <div class="containerEndpoint">
+        <h3><strong class="get">GET</strong> obtener todos los usuarios</h3>
+        <code>
+            GET http://localhost:3000/users
+        </code>
+    </div>
+   
+    <div class="containerEndpoint">
+        <h3><strong class="post">POST</strong> Agregar Nuevo usuarios</h3>
+        <code>
+            <span>POST http://localhost:3000/users</span>
+            <span>Content-Type: application/json</span>
+            <br>
+            <span>{</span>
+            <span class="paddingLeft">"firstName": "Hector",</span>
+            <span class="paddingLeft">"lastName": "Madariaga",</span>
+            <span class="paddingLeft"> "email": "ejemplo@gmail.com",</span>
+            <span class="paddingLeft">"professionId": 4</span>
+            <span>}</span>
+        </code>
+    </div>
+
+    <div class="containerEndpoint">
+        <h3><strong class="get">GET</strong> Encontrar usuario por Id</h3>
+        <code>
+            <span>GET http://localhost:3000/users/{id}</span>
+        </code>
+    </div>
+
+    <div class="containerEndpoint">
+        <h3><strong class="delete">DELETE</strong> Eliminar Usuario por Id</h3>
+        <code>
+            <span>DELETE http://localhost:3000/users/{id}</span>
+        </code>
+    </div>
+
+    <div class="containerEndpoint">
+        <h3><strong class="put">PUT</strong> Insertar un nuevo Usuario</h3>
+        <span class="note">Debe incluir un Id valido, pero no todos los campos son obligatorios</span>
+        <code>
+            <span>PUT http://localhost:3000/users/{id}</span>
+            <span>Content-Type: application/json</span>
+            <br>
+            <span>{</span>
+            <span class="paddingLeft">"firstName": "Aurimar",</span>
+            <span class="paddingLeft">"lastName": "Perez",</span>
+            <span class="paddingLeft"> "email": "correo@gmail.com",</span>
+            <span class="paddingLeft">"professionId": 1</span>
+            <span>}</span>
+        </code>
+    </div>
+</body>
+</html>

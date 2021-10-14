@@ -1,0 +1,34 @@
+@api = http://localhost:3000/users
+
+### showAllUsers
+GET {{api}}
+
+
+### createNewUser 
+POST  {{api}}
+Content-Type: application/json
+
+{
+    "firstName": "Hector",
+    "lastName": "Madariaga",
+    "email": "ejemplo@gmail.com",
+    "professionId": 4
+}
+
+
+### findUserbyID
+GET {{api}}/1
+
+
+### deleteUserbyID
+DELETE  {{api}}/4
+
+
+### updateUserbyID
+PUT {{api}}/2
+Content-Type: application/json
+
+{
+    "firstName": "Antonieta",
+    "email": "antonieta@gmail.com"
+}
